@@ -1,39 +1,77 @@
+![logotipo de The Bridge](https://user-images.githubusercontent.com/27650532/77754601-e8365180-702b-11ea-8bed-5bc14a43f869.png  "logotipo de The Bridge")
+
 # Caza-pokimon #
 
 ## Introducción ##
 
+![](poki1.gif)
+
+Haremos una aplicación que contará con las 3 herramientas que aprenderemos la semana de la visualizacion de datos:
+- Uso de API externa
+- Mapas
+- Gráficas
+
 ## Objetivos ##
+
+Pintarás 20 pokimons sobre un mapa al iniciarse y con cada click de ratón agregará uno más. Dispondremos de gráficas en un lateral que nos darán datos sobre la población de pokimons representada.
 
 ## Requisitos ##
 
-## Iteraciones ##
+- Precurso web
+- Programación avanzada
+- Manejo de APIs
+- [Leaflet]
+- [Chartist]
 
-:european_castle: [Cazapokemon](https://pokeapi.co/)
+![](poki2.gif)
+
+## Iteraciones ##
 
 ### Lunes ###
 
-Este proyecto es un punto de inflexión en la manera en la que harás proyectos, puesto que comenzaremos a hacer código que verán otros, y es bueno seguir ciertas reglas o convenciones aceptadas por la gran mayoría, que hacen que tanto el código como el trabajo en equipo sean más fructíferos.
+Tendrías que haber conseguido realizar la [plantilla HTML5 con linters] y tener tu base a utilizar durante la semana. Si no has terminado, te animo a que uses la [plantilla HTML5 con linters de TheBridge] y así poder seguir el ritmo diario.
 
-Dichas convenciones van desde cómo se escribe el código hasta el formato que deben llevar los commits. Aquí un listado de las herramientas que necesitaremos para hoy:
+Tu objetivo será disponer todo el entorno para desarrollar la aplicación.
 
-#### Estilo de commits ####
+1. Crea tu proyecto, con los requisitos dispuestos en la [plantilla HTML5 con linters] que hiciste anteriormente
 
-- [Commitlint](https://commitlint.js.org): Se encargará de comprobar el mensaje que has escrito en el commit.
-- [Commitizen](https://github.com/commitizen/cz-cli): Es un cliente para la terminal que sustituye al comando `git commit`, creando un commit que cumple con las reglas de Commitlint.
-
-#### Estilo de código ####
-
-- [Eslint](https://eslint.org/): Es un analizador de código. Nos dirá si hay errores en el código o si está "mal escrito", sin seguir las reglas de estilo definidas. ¿Crees que es casualidad que todo el código de google esté escrito como si lo hubiese hecho la misma persona?
-
-#### Automatización ####
-
-- [Husky](https://www.npmjs.com/package/husky): Es una herramienta que se encarga de ejecutar herramientas cuando le digamos, automáticamente, como por ejemplo comprobar el estilo antes de hacer commit.
-- [Lint staged](https://github.com/okonet/lint-staged): Complemento que ejecuta los "linters" en el momento que preparamos el código para hacer commit.
+2. Haz una llamada a [Pokeapi] y trae 20 pokimons de la primera generación. Los Pokimons han de ser una colección donde cada uno tiene que tener el tipo de elemento al que pertenece y nombre, al menos.
 
 ### Martes ###
 
+3. Hoy pondrás los 20 pokimons en marcadores.
+
+  Los marcadores se dispondrán de manera aleatoria por toda la península ibérica, y cada vez que pulses un marcador, se mostrará en un "popup" o burbuja el nombre del pokimon al que corresponde.
+
+_Premium_
+
+4. Pon un círculo alrededor de cada marcador, con un color del elemento al que perteneced. Si tiene dos, han de ser círculos concéntricos, uno de mayor diámetro que otro.
+
 ### Miércoles ###
+
+5. Cada marcador que alberga un pokemon tendrá una imagen personalizada. Para ello acudiremos a [PokemonDB], que posee un apartado de "sprites", y ahí podrás encontrar en cada imagen, y según el nombre del pokimon, lo necesario.
+
+  Por ejemplo, en la página https://pokemondb.net/sprites/bulbasaur se puede encontrar la imagen de dicho pokimon en su primera generación https://img.pokemondb.net/sprites/red-blue/normal/bulbasaur.png
 
 ### Jueves ###
 
+6. Representa la distribución de pokimons según la naturaleza del mismo. Tendrás que hacer 2 gráficas, una de barras y otra "de queso".
+
+  Divide la pantalla en tres columnas y ponlo en una de ellas, reservando dos tercios de la pantalla para el mapa y el tercio restante para las dos gráficas, una encima de otra.
+
 ### Viernes ###
+
+7. Haz uso de los eventos para poner un nuevo pokimon allí donde hagas click sobre el mapa. Este pokimon ha de estar completo, es decir, con su imagen incluída.
+
+_premium_
+
+Asegúrate de que se actualizan las gráficas con el nuevo pokimon.
+
+![](poki3.gif)
+
+[Chartist]: https://gionkunz.github.io/chartist-js "Chartist"
+[Leaflet]: https://leafletjs.com "Leaflet"
+[plantilla HTML5 con linters]: https://github.com/TheBridge-FullStackDeveloper/visualizacion-y-consumo-api-pp-template "HTML5 template with linters"
+[plantilla HTML5 con linters de TheBridge]: https://github.com/TheBridge-FullStackDeveloper/template-html5-linter "template-html5-linter"
+[Pokeapi]: https://pokeapi.co "Pokeapi"
+[PokemonDB]: https://pokemondb.net/sprites "PokemonDB"
